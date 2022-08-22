@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <!--Tells the -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your Name Here">
+    <meta name="author" content="sara">
     <meta name="description" content="Default HTML Page for SE 111">
     
     <link type="text/css" rel="stylesheet" href="style.css">
@@ -15,7 +15,7 @@
 <body>
     <!--Build your Table and Form here-->
     <h1>Birthday Registration</h1>
-    <form>
+    <form method="GET" action="confirm.html">
         <table>
             <thead> <!--Headers go inside here-->
 
@@ -113,19 +113,19 @@
                         </td>
                         <td>
                             <label for="drink1">Coke</label>
-                            <input type="checkbox" required name="drink1" value="coke"><br>
+                            <input type="checkbox" name="drink1" value="coke"><br>
 
                             <label for="drink2">Sprite</label>
-                            <input type="checkbox" required name="drink2" value="Sprite"><br>
+                            <input type="checkbox" name="drink2" value="Sprite"><br>
 
                             <label for="drink3">Fruit punch</label>
-                            <input type="checkbox" required name="drink3" value="Fruit punch"><br>
+                            <input type="checkbox" name="drink3" value="Fruit punch"><br>
 
                             <label for="drink4">Lemonade</label>
-                            <input type="checkbox" required name="drink4" value="Lemonade"><br>
+                            <input type="checkbox" name="drink4" value="Lemonade"><br>
 
                             <label for="drink5">Ice Tea</label>
-                            <input type="checkbox" required name="drink5" value="Ice Tea"><br>
+                            <input type="checkbox" name="drink5" value="Ice Tea"><br>
                         </td> 
                     </tr>
                     <tr>
@@ -150,7 +150,27 @@
                         <td>
                             <label for="colors">Color Scheme:</label>
                         </td>
+                        <td>
+                            <input type="color" name="cake">Choose a color for the party
+                        </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <label for="comments">Additional Comments:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="comments" placeholder="Please add additional comments here">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label type="blank"></label>
+                        </td>
+                        <td>
+                            <input type="submit" value="Submit">
+                        </td>
+                    </tr>
+            
                     
                 </tbody>
 
