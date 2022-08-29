@@ -14,25 +14,24 @@
 <body>
     <script>
         var rate = Number(prompt(`enter hourly pay rate: `))
-        console.log(`your hourly rate is: $${rate}`)
+        console.log(`your hourly rate is: $${rate.toFixed(2)}`)
         
         var hours = Number(prompt(`enter amount of hours worked for 2 week period: `) )
-        console.log(`You have worked : ${hours} hours for a 2 week period`)
-
-        var gross = rate * hours
-
+        alert(`You have worked : ${hours} hours for a 2 week period`)
+        
         var taxrate = .20
-        //console.log(`your tax rate is: %${taxrate}`)
+        console.log(`your tax rate is: % ${taxrate}`)
+        
+        var gross = rate * hours
+        console.log(`your gross pay is: $${gross.toFixed(2)}`)
+
 
         var totaltaxes= gross * taxrate
-        console.log(`taxes withheld ${totaltaxes}`)
+        console.log(`taxes withheld $${totaltaxes.toFixed(2)}`)
 
 
-        //var taxamount = taxrate * hours
-        //console.log(`taxes witheld: $${taxamount}`)
-
-        var net = gross - taxamount
-        console.log(`Your net pay: $${net}`)
+        var net = gross - totaltaxes
+        console.log(`Your net pay: $${net.toFixed(2)}`)
 
     </script>
 
