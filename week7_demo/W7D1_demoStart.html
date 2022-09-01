@@ -104,36 +104,6 @@
     <p>end</p>
     <!--IN-DOCUMENT JAVASCRIPT BELOW-->
     <script>
-        var body =  document.querySelector(`body`)
-        console.log(body)
-
-        var newP = ``
-        newP += `<p>`
-        newP += `hello world`
-        newP += `</p>`
-        
-        body.innerHTML += newP
-
-        document.querySelector("#enter-button") .addEventListener (`click`, alertInfo)
-        
-        function alertInfo(event)
-        {
-            var fname = document.querySelector(`#first `).value
-            var lname = document.querySelector(`#last`).value
-            var age = document.querySelector(`#age`).value
-            var full = fname + `` + lname
-            age = Number(age)
-
-            alert(`Hello there, ${full}!`)
-
-            var hello = document.querySelector(`#hello`)
-            hello.innerHTML += ` ${full}!!`
-        }
-
-
-
-
-
 	</script>
 	
 </body>
