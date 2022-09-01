@@ -128,7 +128,39 @@
 
             var hello = document.querySelector(`#hello`)
             hello.innerHTML += ` ${full}!!`
+
+            var info = document.querySelector(`#info`)
+
+            var dog_age = (age * 7).toFixed(1)
+            var cat_age = (age * 4).toFixed(1)
+
+            console.log(`human age: ${age}yrs\ndog age: ${dog_age}\ncat age: ${cat_age} yrs`)
+
+            info.innerHTML += `<br> <p> Human age : ${age} yrs <br> dog age: ${dog_age}yrs <br> cat age: ${cat_age} yrs </p>`
         }
+
+        var me = document.querySelector(`#me`)
+        var you = document.querySelector(`#you`)
+
+        me.addEventListener(`click`, clicked)
+
+        function clicked(e)
+
+        {
+            me.style.color = `red`
+            me.style.fontSize = `72px`
+            me.innerHTML =`ouch!`
+            console.log(`click reached`)
+        }
+
+        var button = document.querySelector(`#submit`)
+
+        button.addEventListener(`click`, function(event){
+
+            console.log(event)
+        }
+        )
+
 
 
 
