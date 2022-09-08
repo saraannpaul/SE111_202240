@@ -149,36 +149,44 @@
             
             var taxrate = .20
             
-            var totaltaxes= gross * taxrate
+            var taxAmount= gross * taxrate
             
             var net = gross - totaltaxes
 
             //console.log() all three processed values, rounded to the second decimal place
         
             console.log(`your gross pay is: $${gross.toFixed(2)}`)         
-            console.log(`taxes withheld $${totaltaxes.toFixed(2)}`)
+            console.log(`taxes withheld $${taxAmount.toFixed(2)}`)
             console.log(`your net pay is: % ${net.toFixed(2)}`)
 
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
-            var finalMessage = ``
+            var finalMessage = `${full} <br> ${hours} <br> ${rate.toFixed(2)}`
 
         
             //create a new var called 'info' and store the entire #info *HTML element* to it
+            var info = document.querySelector(`#info`)
 
 
             //create a new var called 'num' and store the entire #check *HTML element* to it
             
+            var num = document.querySelector(`#check`)
 
             //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
+
+            element.innerHTML += ` ${finalMessage}`
 
 
 
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
 
+            info.innerHTML += `<br> <p> gross pay: $${gross} <br> taxes: $${taxAmount}<br> net pay: $${net} </p>`
+
 
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
+
+            document.querySelector(`#submit`).addEventListener(`click`, alertName)
 
         
             function submitNow(e)
