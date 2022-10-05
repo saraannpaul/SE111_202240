@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Paul Bio</title>
+
+    <style>
+        h1{color: darkorange;}
+        h2{color: lightseagreen;}
+        body{background-color: tan;}
+        .hide{display: none;}
+        
+
+
+    </style>
+
+
+</head>
+<body>
+    <h1>Sara Paul Bio</h1>
+    <hr>
+
+    <div id="nav"></div>
+
+    <a href="#">Bio</a>
+    <a href="#">Education</a>
+    <a href="#">Hobbies</a>
+    <hr>
+
+    <div id="main">
+        <div id="bio">
+            <h2>My Bio</h2>
+            <img src="images/binasarahug.jpg" alt="binasarahug" style="width:250px;">
+            <p><b>Hello! My name is Sara. I am 36 years old. I am a Virgo. Virgos are said to be analytical thinkers and very helpful to others. I am both of those things. I live in Woonsocket, RI.</b></p>
+        
+            <p><i>I am a fulltime caretaker to my sister Sabrina. She is my whole world. She keeps me laughing and keeps me on my toes. I work parttime as a hairstylist too. I enjoy it but its time for a change and that lead me to NEIT!</i></p>
+            <hr>
+            
+            <div id="ed hide">
+                <h2>Schooling</h2>
+                <ul>
+                    <li><strong>Woonsocket High School</li>
+                    <li>Rob Roy Academy</li></strong></li>
+                    <li>
+                        <a href="https://www.neit.edu/
+                        " target="_blank">New England Tech</a>
+                    </li>
+                </ul>
+                <hr>
+
+                <div id="hobbies hide">
+                    <h2>Hobbies</h2>
+                    <ol>
+                        <li><em>Hanging out with my family and friends ( Quality time is one of my love languages)</li>
+                        <li>Learning new things on Youtube, UDemy, etc.</li>
+                        <li>I love social media like IG and Tiktok !</li>
+                        <li>Self development (Mind, body, and soul)</em></li>
+                    </ol>
+                    <hr>
+
+                    <div id="footer">
+                        <p>&copy 2022 Sara Paul | Wk 1 assignment</p>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <hr>
+    
+    <script>
+        var bio = document.querySelector(`bio`);
+        var ed = document.querySelector(`ed`);
+        var hobbies = document.querySelector(`hobbies`);
+
+        mytag.addEventListener(`click`, function(e){
+        e.preventDefault();})
+   
+        bio.addEventListener(`click`, function(e){mipage(bio, true)});
+
+        ed.addEventListener(`click`, function(e){mipage(ed)});
+
+        hobbies.addEventListener(`click`, function(e){mipage(hobbies)});
+        
+
+
+        function mipage (_family, _all=false){
+            bio.classList.add(`hide`);
+            ed.classList.add(`hide`);
+            hobbies.classList.add(`hide`);
+
+            if(_all === true){
+                bio.classList.remove(`hide`);
+                ed.classList.remove(`hide`);
+                hobbies.classList.remove(`hide`);
+
+                return
+
+            }
+
+            _family.classList.remove(`hide`);
+
+        }
+
+        
+
+
+    </script>
+
+</body>
+</html>
