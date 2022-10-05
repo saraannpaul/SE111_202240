@@ -1,28 +1,106 @@
 <!doctype html>
 <html>
+
 <head>
 <meta charset="utf-8">
 <title>Week 2 Files</title>
+<author>BY: Sara Paul</author>
+
 <style type="text/css">
-	.border{border:1px solid black;}
+
+	.border {
+		border:5px solid blueviolet;
+		margin-bottom:10px;
+		min-height:20px;
+
+		}
+
 </style>
+
 </head>
 
 <body>
-</body>
+	<br>
+	<br>
 
-<script type="text/javascript">
+
+	<script type="text/javascript">
 	//Use this Array of objects to complete the assignment.
-	var people =[
-		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
-		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
-		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
-		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
-		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
-		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
-		{first:"Marion", last:"Cobretti", credit:"Cobra" }
-	]
 	
-</script>
+		var people =[
+
+			//0
+			{first:"Jason", 
+			last:"Vorhees", 
+			credit:"Friday the 13th"},
+
+			//1
+			{first:"Freddy", 
+			last:"Krueger", 
+			credit:"A Nightmare on Elm Street" },
+
+			//2
+			{first:"Roger", 
+			last:"Rabbit", 
+			credit:"Who Framed Roger Rabbit" },
+
+			//3
+			{first:"Kevin", 
+			last:"McCallister",
+			credit:"Home Alone" },
+
+
+			//4
+			{first:"Godzilla",
+			last:"King of The Monsters", credit:"Godzilla" },
+
+			//5
+			{first:"Buzz", 
+			last:"Lightyear", 
+			credit:"Toy Story" },
+
+			//6
+			{first:"Marion", 
+			last:"Cobretti", 
+			credit:"Cobra"}
+		]
+
+		//console.log(peope[0])
+		//console.log(people[0].first)
+
+		var body = document.querySelector(`body`)
+		//console.log(body)
+		//console.dir(body)
+
+		for(let i = 0; i < people.length; i++)
+		{
+
+			var tempDiv = document.createElement(`div`)
+
+			tempDiv.setAttribute(`id`, i)
+			tempDiv.setAttribute(`class`,`border`)
+
+			for(key in people[i])
+			{
+
+				var p = document.createElement(`p`)
+
+				var text = document.createTextNode(people[i][key])
+
+				p.appendChild(text)
+			
+				tempDiv.appendChild(p)
+			}
+		
+			body.appendChild(tempDiv)
+
+		}
+	
+
+
+	
+	</script>
+
+</body>	
 
 </html>
