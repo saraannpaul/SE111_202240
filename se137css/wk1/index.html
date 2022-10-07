@@ -82,25 +82,25 @@
         var bio = document.querySelector(`bio`);
         var ed = document.querySelector(`ed`);
         var hobbies = document.querySelector(`hobbies`);
+        var links = document.querySelectorAll(`a`);
 
-        mytag.addEventListener(`click`, function(e){
+        document.addEventListener(`click`, function(e){
         e.preventDefault();
    
-        bio.addEventListener(`click`, function(e){mipage(bio, true)});
-
-        ed.addEventListener(`click`, function(e){mipage(ed)});
-
-        hobbies.addEventListener(`click`, function(e){mipage(hobbies)});
         
-    })
+        links[0].addEventListener(`click`, function(e){show(bio)});
 
+        links[1].addEventListener(`click`, function(e){show(ed)});
 
-        function mipage (_family, _all=false){
+        links[2].addEventListener(`click`, function(e){show(hobbies)});
+        })  
+    
+        function show (family, all=false){
             bio.classList.add(`hide`);
             ed.classList.add(`hide`);
             hobbies.classList.add(`hide`);
 
-            if(_all === true){
+            if(all === true){
                 bio.classList.remove(`hide`);
                 ed.classList.remove(`hide`);
                 hobbies.classList.remove(`hide`);
@@ -109,7 +109,7 @@
 
             }
 
-            _family.classList.remove(`hide`);
+            family.classList.remove(`hide`);
 
         }
 
