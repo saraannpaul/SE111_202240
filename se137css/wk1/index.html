@@ -49,9 +49,7 @@
                 <ul>
                     <li><strong>Woonsocket High School</li>
                     <li>Rob Roy Academy</li></strong></li>
-                    <li>
-                        <a href="https://www.neit.edu/
-                        " target="_blank">New England Tech</a>
+                    <li> <a href="https://www.neit.edu/" target="_blank">New England Tech</a>
                     </li>
                 
                 </ul>
@@ -87,14 +85,14 @@
         var links = document.querySelectorAll(`a`);
 
         document.addEventListener(`click`, function(e){
-        e.preventDefault();
+        
    
         
-        links[0].addEventListener(`click`, function(e){show(bio)});
+        links[0].addEventListener(`click`, function(e){e.preventDefault();show(bio)});
 
-        links[1].addEventListener(`click`, function(e){show(ed)});
+        links[1].addEventListener(`click`, function(e){e.preventDefault();show(ed)});
 
-        links[2].addEventListener(`click`, function(e){show(hobbies)});
+        links[2].addEventListener(`click`, function(e){e.preventDefault();show(hobbies)});
         })  
     
         function show (family, all=false){
