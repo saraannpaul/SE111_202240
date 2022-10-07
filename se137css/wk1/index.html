@@ -22,23 +22,29 @@
     <h1>Sara Paul Bio</h1>
     <hr>
 
-    <div id="nav"></div>
+    <!--<div id="nav"> -->
+    <nav>
 
     <a href="#">Bio</a>
     <a href="#">Education</a>
     <a href="#">Hobbies</a>
-    <hr>
+    
+    </nav>
+    
 
     <div id="main">
+        <hr>
         <div id="bio">
             <h2>My Bio</h2>
             <img src="images/binasarahug.jpg" alt="binasarahug" style="width:250px;">
             <p><b>Hello! My name is Sara. I am 36 years old. I am a Virgo. Virgos are said to be analytical thinkers and very helpful to others. I am both of those things. I live in Woonsocket, RI.</b></p>
         
             <p><i>I am a fulltime caretaker to my sister Sabrina. She is my whole world. She keeps me laughing and keeps me on my toes. I work parttime as a hairstylist too. I enjoy it but its time for a change and that lead me to NEIT!</i></p>
-            <hr>
+        <hr>
+        </div>
+        
             
-            <div id="ed hide">
+            <div id="ed" class="hide">
                 <h2>Schooling</h2>
                 <ul>
                     <li><strong>Woonsocket High School</li>
@@ -47,10 +53,14 @@
                         <a href="https://www.neit.edu/
                         " target="_blank">New England Tech</a>
                     </li>
+                
                 </ul>
-                <hr>
+            <hr>
+            </div>
 
-                <div id="hobbies hide">
+                
+
+                <div id="hobbies" class="hide">
                     <h2>Hobbies</h2>
                     <ol>
                         <li><em>Hanging out with my family and friends ( Quality time is one of my love languages)</li>
@@ -59,29 +69,21 @@
                         <li>Self development (Mind, body, and soul)</em></li>
                     </ol>
                     <img src="images/prayer.jpg" alt="prayer" style="width:350px;">
-                    <hr>
+                <hr>
+                </div>    
+                    
 
                     <div id="footer">
                         <p>&copy 2022 Sara Paul | Wk 1 assignment</p>
+                    <hr>    
                     </div>
 
-
-                </div>
-
-
-            </div>
-
-
-
-        </div>
-
-    </div>
-    <hr>
+                    
     
     <script>
-        var bio = document.querySelector(`bio`);
-        var ed = document.querySelector(`ed`);
-        var hobbies = document.querySelector(`hobbies`);
+        var bio = document.querySelector(`#bio`);
+        var ed = document.querySelector(`#ed`);
+        var hobbies = document.querySelector(`#hobbies`);
         var links = document.querySelectorAll(`a`);
 
         document.addEventListener(`click`, function(e){
